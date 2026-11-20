@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voices Uploader | TikTok Authorization Callback</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 720px; margin: 60px auto; padding: 0 20px; background: #0f172a; color: #f8fafc; }
+    .box { background: #1e293b; padding: 18px; border-radius: 10px; border: 1px solid #334155; word-break: break-all; font-family: monospace; font-size: 0.9rem; }
+    button { margin-top: 14px; padding: 10px 18px; border: 0; border-radius: 8px; background: #22c55e; color: #052e16; font-weight: 700; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>TikTok Authorization Complete</h2>
+  <p>Copy the full URL below and paste it into PowerShell for <code>tiktok_upload.py --auth</code>:</p>
+  <div class="box" id="urlBox"></div>
+  <button onclick="navigator.clipboard.writeText(window.location.href).then(() => this.textContent='Copied!')">Copy Full URL</button>
+  <script>document.getElementById('urlBox').textContent = window.location.href;</script>
+</body>
+</html>
